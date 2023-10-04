@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos</title>
+</head>
+<body>
+    <button onclick="Pares()">S2 Pares</button>
+    <div id="div_mostrar"></div>
+</body>
+</html>
+<script>
+
+    function Pares(){
+        numero = 0;
+        div_mostrar.innerHTML = ``
+        while (numero <= 100) {
+            
+            div_mostrar.innerHTML += `${numero}<br>`
+            numero += 2    
+        }
+    }
+
+
+</script>
