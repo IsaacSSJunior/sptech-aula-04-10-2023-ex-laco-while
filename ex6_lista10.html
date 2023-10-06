@@ -6,22 +6,25 @@
     <title>Algoritmos</title>
 </head>
 <body>
-    <button onclick="Cabalisticos()">Cabalisticos</button>
+    <h3>Pessoa que você mais ama</h3>
+    <input type="text" id="input_nome">
+    <h3>Quanto você a ama?</h3>
+    <input type="number" id="input_numero">
+    <button onclick="ExpresarS2()">Expressar amor</button>
     <div id="div_mostrar"></div>
 </body>
 </html>
 <script>
 
-    function Cabalisticos(){
-        
-        numero = 1;
+    function ExpresarS2(){
+        var nome = input_nome.value 
+        var vezes = Number(input_numero.value);
+        var numero = 0
         div_mostrar.innerHTML = ``
-        while (numero <= 30) {
+        while (numero <= vezes) {
 
-            if (numero != 30) {
-                div_mostrar.innerHTML += `${numero}<br>`
-                numero += 1    
-            }
+                numero += 1
+                div_mostrar.innerHTML += `${numero} - ${nome}, eu te amo! Sempre lembre disso!<br>`    
             
         }
     }

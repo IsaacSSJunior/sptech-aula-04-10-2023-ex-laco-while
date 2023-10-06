@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos</title>
+</head>
+<body>
+    <h3>Mínimo (intervalo)</h3>
+    <input type="number" id="input_min">
+    <h3>Máximo (intervalo)</h3>
+    <input type="number" id="input_max">
+    <button onclick="Pares()">S2 Pares</button>
+    <div id="div_mostrar"></div>
+</body>
+</html>
+<script>
+
+    function Pares(){
+        div_mostrar.innerHTML = ``
+        var min = Number(input_min.value)
+        var max = Number(input_max.value)
+        var numero = min;
+
+        while (numero <= max) {
+
+            if (numero % 2 == 2) {
+                div_mostrar.innerHTML += `${numero}<br>`    
+            }
+            
+            numero += 1    
+        }
+    }
+
+
+</script>

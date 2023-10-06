@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de '5'</title>
+</head>
+<body>
+    <input type="text" id="input_numero">
+    <button onclick="Viva5()">Adoro múltiplos de 5!</button>
+    <div id="div_mostrar"></div>
+    
+</body> 
+</html>
+<script>
+    function Viva5() {
+        div_mostrar.innerHTML = ``
+        var contador = 0
+        var numero = Number(input_numero.value)
+        while (contador <= numero) {
+            div_mostrar.innerHTML += `${contador} `
+            contador += 5
+        }
+    }
+</script>
