@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Quantas voltas?</h3>
+    <input type="number" id="input_voltas">
+    
+    <button onclick="corrida()">Iniciar Corrida</button>
+
+    <div id="div_mostrar"></div>
+
+    
+</body>
+</html>
+<script>
+
+    function corrida() {
+        var voltas = Number(input_voltas.value)
+        var contador = 1
+
+        while (contador <= voltas) {
+
+            if (contador == voltas) {
+                div_mostrar.innerHTML += `Corrida finalizada!<br>`
+                
+            } else {
+                
+            }
+
+            div_mostrar.innerHTML += `Carro dando a ${contador}ª volta <br>`
+            contador++
+
+            
+        }
+
+
+    }
+</script>
