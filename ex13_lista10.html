@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musculação</title>
+</head>
+
+<body>
+    <h1>De quantos em quantos você prática musculação?</h1>
+    <input type="number" id="input_vezes">
+    <button onclick="rotina()">Exibir Rotina mensal!</button>
+    <div id="div_mostrar">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    function rotina() {
+        var vezes = Number(input_vezes.value)
+        var contador = 2
+        div_mostrar.innerHTML = `Dia 1 - Musculação<br>`
+
+
+        while (contador <= 30) {
+
+
+            
+            if ((contador - 1) % vezes == 0){
+                div_mostrar.innerHTML += `Dia ${contador} - Musculação<br>`
+            } else{
+                div_mostrar.innerHTML += `Dia ${contador} - Comer, dormir etc<br>`
+            }
+
+
+
+            contador++
+        }
+
+    }
+
+
+</script>

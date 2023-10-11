@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canção dos Elefantes</title>
+</head>
+
+<body>
+    <h1>Quantos elefantes?</h1>
+    <input type="number" id="input_quantidade">
+    <button onclick="gerarCancao()">Atazanar a Médium</button>
+    <div id="div_mostrar"></div>
+
+    <script>
+        function gerarCancao() {
+            var quantidadeElefantes = Number(input_quantidade.value);
+            var elefantes_1 = 1;
+            div_mostrar.innerHTML = '';
+
+            while (elefantes_1 < quantidadeElefantes) {
+                div_mostrar.innerHTML += `<br>${elefantes_1} elefante incomoda muita gente!<br>`;
+
+                if (elefantes_1 < quantidadeElefantes) {
+                    var elefantes_2 = elefantes_1 + 1;
+                    div_mostrar.innerHTML += `${elefantes_2} elefante, `;
+
+                    var incomoda = 0;
+                    while (incomoda < elefantes_2) {
+                        div_mostrar.innerHTML += 'incomodam';
+                        incomoda++;
+                        if (incomoda < elefantes_2) {
+                            div_mostrar.innerHTML += ', ';
+                        }
+                    }
+
+                    div_mostrar.innerHTML += ' muito mais!<br>';
+                }
+
+                elefantes_1++;
+            }
+        }
+    </script>
+</body>
+
+</html>
